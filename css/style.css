@@ -1,0 +1,342 @@
+/*Body*/
+body{
+  font-family: 'Playfair Display SC', serif;
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  background-color: #F2F2F2;
+}
+/*__________Header__________*/
+a {
+  color: #000;
+  font-size: 20px;
+}
+
+/* header */
+
+.header {
+  margin-top: -15px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position:absolute;
+  width: 100%;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover, .header .menu-btn:hover {
+    background-color: #ded9d9;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  margin-top: 24px;
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 54px 40px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 44px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 10px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -10px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 340px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 70em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  h2{
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    margin-top: 94px;
+    margin-bottom: 124px;
+    line-height: 73px;
+    height:134px;
+   }
+  nav{
+    display: none;
+  }
+}
+figcaption {
+  padding-left: 15%;
+}
+figcaption p {
+  font-family: 'Roboto', sans-serif;
+	font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 42px;
+	text-align: left;
+  max-width: 540px;
+}
+figcaption h1 {
+  padding-bottom: 24px;
+  padding-top: 204px;
+	text-align: left;
+}
+figure img {
+  width: 100%;
+    max-width: 564px;
+    height: auto;
+  object-fit: cover; 
+  padding-top: 44px;
+  padding-bottom: 54px;
+  }
+figure {
+  justify-content: center;
+	display: flex;
+}
+.parallax1 {
+  background-image: url(../pic/Main/3.jpg);
+  width: 100%;
+  height: 700px;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.parallax1 .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+  z-index: 2;
+}
+.parallax2 {
+  background-image: url(../pic/Main/4.jpg);
+  width: 100%;
+  height: 700px;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.parallax2 .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+  z-index: 2;
+}
+.parallax3 {
+  background-image: url(../pic/Main/7.jpg);
+  width: 100%;
+  height: 700px;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.parallax3 .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+  z-index: 2;
+}
+.parallax1 h1{
+  text-align: center;
+  color: white;
+  font-size: 44px;
+  z-index: 3;
+ }
+.parallax2 h1{
+  text-align: center;
+  color: white;
+  font-size: 44px;
+  z-index: 3;
+ }
+ .parallax3 h1{
+  text-align: center;
+  color: white;
+  font-size: 44px;
+  z-index: 3;
+ }
+h1{
+  font-family: 'Playfair Display SC', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 73px;
+}
+h2{
+  text-align: center;
+  font-family: 'Playfair Display SC', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  margin-top: 94px;
+  line-height: 73px;
+  height:134px;
+ }
+@media (max-width:1440px) {
+	figure {
+    justify-content: space-around;
+		display: flex;
+		flex-wrap: wrap;
+	  }
+	article figure {
+     display: flex;
+	   justify-content: center;
+	  }
+    figcaption h1 {
+      padding-bottom: 24px;
+      padding-top: 54px;
+      text-align: left;
+    }
+  }
+  @media (min-width:640px) {
+	article figure img {
+       display: flex;
+	   justify-content: center;
+	  }
+  }
+section{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 74px;
+}
+/*________footer________*/
+footer nav{
+	font-size: 20px;
+}
+footer nav a{
+  color:white;
+  text-decoration: none;
+  transition: color .2s linear;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 34px;
+  margin-top: 64px;
+}
+footer{
+  background-color: black;
+  height:100%;
+  padding-left: 10px;	
+  display:flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+}
+footer div{
+  margin-bottom: 34px;
+  margin-top: 23px;
+  padding-right: 124px;
+}
+footer div a img{
+  padding-right: 0px;
+}
+footer a{
+  text-decoration: underline;
+  color: white;
+}
+.center1 {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.center2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 180px;
+}
